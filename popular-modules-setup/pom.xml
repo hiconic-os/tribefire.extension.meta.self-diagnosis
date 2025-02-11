@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tribefire.extension.meta.self-diagnosis</groupId>
+		<artifactId>parent</artifactId>
+		<version>[1.0,1.1)</version>
+	</parent>
+	<artifactId>popular-modules-setup</artifactId>
+	<version>1.0.1</version>
+	<properties>
+		<V.hiconic.ext.graphql>[4.0,4.1)</V.hiconic.ext.graphql>
+		<V.tribefire.cortex.assets>[3.0,3.1)</V.tribefire.cortex.assets>
+		<V.tribefire.cortex>[3.0,3.1)</V.tribefire.cortex>
+		<V.tribefire.extension.antivirus>[3.0,3.1)</V.tribefire.extension.antivirus>
+		<V.tribefire.extension.audit>[2.0,2.1)</V.tribefire.extension.audit>
+		<V.tribefire.extension.email>[4.0,4.1)</V.tribefire.extension.email>
+		<V.tribefire.extension.etcd>[2.0,2.1)</V.tribefire.extension.etcd>
+		<V.tribefire.extension.hibernate>[2.0,2.1)</V.tribefire.extension.hibernate>
+		<V.tribefire.extension.hikari>[1.0,1.1)</V.tribefire.extension.hikari>
+		<V.tribefire.extension.html-marshalling>[3.0,3.1)</V.tribefire.extension.html-marshalling>
+		<V.tribefire.extension.jdbc.support>[3.0,3.1)</V.tribefire.extension.jdbc.support>
+		<V.tribefire.extension.job-scheduling>[1.0,1.1)</V.tribefire.extension.job-scheduling>
+		<V.tribefire.extension.kubernetes>[3.0,3.1)</V.tribefire.extension.kubernetes>
+		<V.tribefire.extension.model-browser>[1.0,1.1)</V.tribefire.extension.model-browser>
+		<V.tribefire.extension.okta>[3.0,3.1)</V.tribefire.extension.okta>
+		<V.tribefire.extension.process>[1.0,1.1)</V.tribefire.extension.process>
+		<V.tribefire.extension.scripting>[1.0,1.1)</V.tribefire.extension.scripting>
+		<V.tribefire.extension.server-sent-events>[3.0,3.1)</V.tribefire.extension.server-sent-events>
+		<V.tribefire.extension.shiro>[5.0,5.1)</V.tribefire.extension.shiro>
+		<V.tribefire.extension.spreadsheet>[2.0,2.1)</V.tribefire.extension.spreadsheet>
+		<V.tribefire.extension.swagger>[3.0,3.1)</V.tribefire.extension.swagger>
+		<V.tribefire.extension.tika>[1.0,1.1)</V.tribefire.extension.tika>
+		<V.tribefire.extension.vitals.jdbc>[3.0,3.1)</V.tribefire.extension.vitals.jdbc>
+		<V.tribefire.extension.web-api>[1.0,1.1)</V.tribefire.extension.web-api>		
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>tribefire.setup.classic</groupId>
+			<artifactId>web-platform-setup</artifactId>
+			<version>[3.0,3.1)</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+
+		<!-- Also brings shiro module -->
+		<dependency>
+			<groupId>tribefire.extension.shiro</groupId>
+			<artifactId>shiro-initializer-module</artifactId>
+			<version>[5.0,5.1)</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+
+		<dependency>
+			<groupId>tribefire.extension.hibernate</groupId>
+			 <artifactId>hibernate-module</artifactId>
+			<version>${V.tribefire.extension.hibernate}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.hibernate</groupId>
+			 <artifactId>hibernate-leadership-edr2cc-module</artifactId>
+			<version>${V.tribefire.extension.hibernate}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+
+		<dependency>
+			<groupId>tribefire.extension.hibernate</groupId>
+			 <artifactId>hibernate-leadership-edr2cc-module</artifactId>
+			<version>${V.tribefire.extension.hibernate}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+
+		<dependency>
+			<groupId>hiconic.ext.graphql</groupId>
+			<artifactId>graphql-module</artifactId>
+			<version>${V.hiconic.ext.graphql}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>audit-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>auth-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>auth-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>cortex-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>cortex-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>default-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>setup-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>user-sessions-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>user-statistics-wb-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex.assets</groupId>
+			<artifactId>workbench-initializer</artifactId>
+			<version>${V.tribefire.cortex.assets}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex</groupId>
+			<artifactId>db-connection-check-module</artifactId>
+			<version>${V.tribefire.cortex}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex</groupId>
+			<artifactId>db-connection-check-standard-initializer</artifactId>
+			<version>${V.tribefire.cortex}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.cortex</groupId>
+			<artifactId>gm-db-locking-module</artifactId>
+			<version>${V.tribefire.cortex}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<!-- Left out for now as it requires special repository configuration
+		<dependency>
+			<groupId>tribefire.extension.antivirus</groupId>
+			<artifactId>antivirus-initializer</artifactId>
+			<version>${V.tribefire.extension.antivirus}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.antivirus</groupId>
+			<artifactId>antivirus-module</artifactId>
+			<version>${V.tribefire.extension.antivirus}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>tribefire.extension.audit</groupId>
+			<artifactId>data-audit-module</artifactId>
+			<version>${V.tribefire.extension.audit}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.audit</groupId>
+			<artifactId>service-audit-module</artifactId>
+			<version>${V.tribefire.extension.audit}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.email</groupId>
+			<artifactId>email-initializer</artifactId>
+			<version>${V.tribefire.extension.email}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.email</groupId>
+			<artifactId>email-module</artifactId>
+			<version>${V.tribefire.extension.email}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.etcd</groupId>
+			<artifactId>etcd-vitals-module</artifactId>
+			<version>${V.tribefire.extension.etcd}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.hibernate</groupId>
+			<artifactId>hibernate-accesses-edr2cc-module</artifactId>
+			<version>${V.tribefire.extension.hibernate}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.hibernate</groupId>
+			<artifactId>hibernate-module</artifactId>
+			<version>${V.tribefire.extension.hibernate}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.hikari</groupId>
+			<artifactId>hikari-module</artifactId>
+			<version>${V.tribefire.extension.hikari}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.html-marshalling</groupId>
+			<artifactId>html-marshaller-module</artifactId>
+			<version>${V.tribefire.extension.html-marshalling}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.jdbc.support</groupId>
+			<artifactId>jdbc-support-initializer</artifactId>
+			<version>${V.tribefire.extension.jdbc.support}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.jdbc.support</groupId>
+			<artifactId>jdbc-support-module</artifactId>
+			<version>${V.tribefire.extension.jdbc.support}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.job-scheduling</groupId>
+			<artifactId>job-scheduling-initializer</artifactId>
+			<version>${V.tribefire.extension.job-scheduling}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.job-scheduling</groupId>
+			<artifactId>job-scheduling-quartz-module</artifactId>
+			<version>${V.tribefire.extension.job-scheduling}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.kubernetes</groupId>
+			<artifactId>kubernetes-module</artifactId>
+			<version>${V.tribefire.extension.kubernetes}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.model-browser</groupId>
+			<artifactId>model-browser-module</artifactId>
+			<version>${V.tribefire.extension.model-browser}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.okta</groupId>
+			<artifactId>okta-initializer</artifactId>
+			<version>${V.tribefire.extension.okta}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.okta</groupId>
+			<artifactId>okta-module</artifactId>
+			<version>${V.tribefire.extension.okta}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.process</groupId>
+			<artifactId>process-initializer</artifactId>
+			<version>${V.tribefire.extension.process}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.process</groupId>
+			<artifactId>process-module</artifactId>
+			<version>${V.tribefire.extension.process}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.process</groupId>
+			<artifactId>process-wb-initializer</artifactId>
+			<version>${V.tribefire.extension.process}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.scripting</groupId>
+			<artifactId>groovy-scripting-module</artifactId>
+			<version>${V.tribefire.extension.scripting}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.scripting</groupId>
+			<artifactId>scripting-module</artifactId>
+			<version>${V.tribefire.extension.scripting}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.server-sent-events</groupId>
+			<artifactId>sse-initializer</artifactId>
+			<version>${V.tribefire.extension.server-sent-events}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.server-sent-events</groupId>
+			<artifactId>sse-module</artifactId>
+			<version>${V.tribefire.extension.server-sent-events}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.shiro</groupId>
+			<artifactId>shiro-initializer-module</artifactId>
+			<version>${V.tribefire.extension.shiro}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.shiro</groupId>
+			<artifactId>shiro-initializer-module</artifactId>
+			<version>${V.tribefire.extension.shiro}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.shiro</groupId>
+			<artifactId>shiro-module</artifactId>
+			<version>${V.tribefire.extension.shiro}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.spreadsheet</groupId>
+			<artifactId>spreadsheet-exchange-module</artifactId>
+			<version>${V.tribefire.extension.spreadsheet}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.swagger</groupId>
+			<artifactId>swagger-model-import-initializer</artifactId>
+			<version>${V.tribefire.extension.swagger}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.swagger</groupId>
+			<artifactId>swagger-model-import-module</artifactId>
+			<version>${V.tribefire.extension.swagger}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.tika</groupId>
+			<artifactId>tika-module</artifactId>
+			<version>${V.tribefire.extension.tika}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.vitals.jdbc</groupId>
+			<artifactId>jdbc-dcsa-storage-module</artifactId>
+			<version>${V.tribefire.extension.vitals.jdbc}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.vitals.jdbc</groupId>
+			<artifactId>jdbc-dcsa-storage-plugin-to-module-adjuster</artifactId>
+			<version>${V.tribefire.extension.vitals.jdbc}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>http-client-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>openapi-v3-initializer-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>openapi-v3-initializer-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>openapi-v3-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>web-api-client-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>web-api-server-initializer</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>web-api-server-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>web-rpc-server-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>web-streaming-server-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+		<dependency>
+			<groupId>tribefire.extension.web-api</groupId>
+			<artifactId>ws-module</artifactId>
+			<version>${V.tribefire.extension.web-api}</version>
+			<classifier>asset</classifier>
+			<type>man</type>
+			<?tag asset?>
+		</dependency>
+
+	</dependencies>
+</project>
