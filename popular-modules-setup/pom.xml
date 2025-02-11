@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>tribefire.extension.meta.self-diagnosis</groupId>
@@ -10,7 +6,7 @@
 		<version>[1.0,1.1)</version>
 	</parent>
 	<artifactId>popular-modules-setup</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<properties>
 		<V.hiconic.ext.graphql>[4.0,4.1)</V.hiconic.ext.graphql>
 		<V.tribefire.cortex.assets>[3.0,3.1)</V.tribefire.cortex.assets>
